@@ -1,0 +1,24 @@
+Everything we need to motivate us to learn from this book is in the first sentence of the first chapter. Hosmer states that "PowerShell provides a great acquisition engine for obtaining a vast array of information from live systems, servers, peripherals, mobile devices, and data-driven applications like Active Directory". From this statement we know that PowerShell will acquire a vast array of information from a list of things. All those things are all the systems we deal with. So I think this means that PowerShell might be the most robust and detailed tool to extract any and all the information we may need to conduct any kind of investigation on those systems. I like to imagine that this will be everything and anything we need. Let's see if this becomes true!
+
+The book also promises that bridging PowerShell and Python will result in a workbench for developing new innovative approaches to live investigations and incident response applications! Let's go!
+
+A brief history is givin and an explanation of how PowerShell is used to day. To sum it up, it is used to examine and manage local and remote systems. Examine and Manage.
+
+The book suggests using the PowerShell ISE to experiment. This version of PowerShell has an integrated environment, the ability to write, test, and debug scripts, provides easy access to context-sensitive help, and it has automatic completion of commands that speed both the development and learning!
+
+Next, there is a good run down on how to navigate PowerShell ISE with pics and examples. 
+
+Then, the book goes into some detail about CmdLets, which is a PowerShell script that performs a specific function. It is a specific order from a user to the operating system, or to an application to perform a services. They are expressd as a verb-noun pair, like a spoken command with the action and then the object such as "swim fish" where I am telling the fish to swim. It feels a bit like a verbal command to cast a spell. Fire-Ball! Fire is the action or expression of existence, ball is the object it forms in. It also sounds like Sword Art Online: Alicization, when the fluct lights (and kirito) do a "System-Call". They say something like, "System Call: Generate Luminence Object". A CmdLet is this kind of call to the systems operating system! And with root privileges, you are the pontifex!
+
+Any way...
+
+The Book finishes with some key CmdLets and then four challenges. 
+    -Get-Help
+    -Get-Process
+    -Get-Member
+    
+    (If you don't know about these, fire up a PowerShell prompt and type them in. After "Get-Help", use it to look at the other two)
+    
+The challenges are simple but extremely useful starting off. It has you execute a Find based on file extensions, like looking up all of yor PDFs. Then it has you check out some network settings which is incredibly useful. Next, you examine firewall settings and finaly you are encouraged to explore on your own. This was a nice introduction to PowerShell and a fairly quick read. 
+
+Next up, Chapter 2: PowerShell Pipelining!
