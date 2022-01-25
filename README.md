@@ -1,4 +1,4 @@
-# powerThon
+# PowerThon
 Chet Hosmer's Powershell and Python book
 Powershell and python together
 
