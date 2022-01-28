@@ -1,0 +1,20 @@
+Chapter 2 details pipelining in that it cretes an assembly line of commands to be executed in a specific sequence while moving the data or results from each cmdlet as well. There is a great break down of an example givin. It shows the cmdlet "Get-Service" and explains what it does. It then points out the pip symbol. After that it has the "Where-Object" CmdLet wich looks specifically at the member property status of each service. The status it is looking for is equal to "Running", so the it is looking for all running services. This is then piped to "Format-Table" with the -AutoSize parameter. This one line will bring up all running services.
+
+Get-Service | Where-Object {$_.Status -eq "Running"} | Format-Table -AutoSize
+
+You can pull up "Stopped" services in this same way which could be good to see if AntiMalware services have been turned off.
+
+The next CmdLet we look at is "Get-Process" which details the running processes. 
+With this one, we are introduced to the PowerShell variable. Variable names in PowerShell begin with the $ symbol. These variable names are not case sensitive, which is interesting because it means that $variable and $VarIable are the same variables. Assigning values to a variable looks like it is expressed in quotes such as $variable = "This is the value of the variable". It is important to know that there are automatic variables such as "PSHOME", "COMPUTERNAME", and "NUMBER_OF_PROCESSORS". 
+
+An important note brought up in the book is that you can use the tick symbol (`), found up on the top left of the keyboard usually on the same key as the tilde (~) sign. This will allow you to have a chain of commands take up multiple lines without breaking, such as:
+
+$id = Get-Process -Name Chrome `
+    | select -ExpandProperty Id
+ 
+Just remember to press "Shit+Enter" after the ` mark.
+
+We then look into the NetTCPConnections CmdLet. 
+
+To discover more CmdLets, the book suggests using the "Get-Help" cmdlet. This is because you can search with get-help by keyword. So you could run "Get-Help TCP" and it should bring up all TCP related CmdLets.
+
