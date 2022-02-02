@@ -18,3 +18,13 @@ We then look into the NetTCPConnections CmdLet.
 
 To discover more CmdLets, the book suggests using the "Get-Help" cmdlet. This is because you can search with get-help by keyword. So you could run "Get-Help TCP" and it should bring up all TCP related CmdLets.
 
+We then check out how to pull up processes and iterate through them with a for loop. Or at least I think it's a for loop. It the "ForEach-Object" cmdlet. This is interesting because you can get specific information from something, such as getting the owning process ID from chrome or whatever you're looking up. The example used in the book is as follows:
+Get-Process -Name Chrome | ForEach-Object {Get-NetTCPConnection -State Established -OwningProcess $_.Id -ErrorAction SilentlyContinue} | Format-Table -Autosize
+
+It is pretty cool how it works, and it is broken down very well in the book.
+
+We also resolve some remote IP addresses with the "Resolve-DnsName" cmdlet. I ran it on the first ip address from my investigation and it turned out to be the ip address to this git-hub page.
+
+The book then shows how to easily make a transcript of all scripting one might do in powershell. It's easy, just type "Start-Transcript" and "Stop-Transcript" to get it. It will save the transcript with a special name either in the parent directory of where you are or just the documents folder. I'm not sure.
+
+The final part to the chapter is looking up 25 different cmdlets and learning about them. The book suggest that I review the help for each of the 25 cmdlets including details and examples. Then describe what the cmdlet does and consider how it could be valuable during an investigation. Next, execute each cmdlet with a minimum of one parameter, if not more. I should also use pipelining to assemble CmdLets, like using Format-Table. then try other things to pipeline. Also, make sure I use the start and stop transcript which I will use so that I can post my findings here and not have to re-type everything out, or at least copy and paste it.
